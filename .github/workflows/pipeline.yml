@@ -63,6 +63,7 @@ jobs:
     
   deploy-STG:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop'
     needs: build
     steps:
       - name: Deploy 
